@@ -1,0 +1,39 @@
+def convert_temperature(scale=None, source_temp=None):
+    "Convert Temperature Kelvin & Celcius"
+    if scale == "K":
+        return 'C', (source_temp - 273.15)# C = (K - 273.15)
+    elif scale == "C":
+        return 'K', (source_temp + 273.15)# K = (C + 273.15)
+    else:
+        print("Needs to be (K) or (C)!")
+        
+scale = input("Select (K) or (C): " ) #For input scales
+source_temp = int(input("What is the temperature: " ))#Amount of temperatures
+r, e = convert_temperature(scale, source_temp)
+print(source_temp, "degrees", scale, "is", e, "degrees", r)
+
+
+def convert_temperature(scale=None, source_temp=None):
+    "Convert Temperature Fahrenheit to Celcius"
+    if scale == "F":
+        return 'C', (source_temp - 32.0) * (5.0/9.0)
+    else:
+        print("Needs to be (F)!")        
+
+scale = input("Select (F):" )
+source_temp = int(input("What is the temperature: " ))
+r, e = convert_temperature(scale, source_temp)
+print(source_temp, "degrees", scale, "is", e, "degrees", r)
+
+
+def convert_temperature(scale=None, source_temp=None):
+    "Convert Temperature Fahrenheit to Kelvin"
+    if scale == "F":
+        return 'K', (source_temp - 32.0) * (5.0/9.0) + 273.15 # K = (F − 32) × 5/9 + 273.15
+    else:
+        print("Needs to be (F)!")
+
+scale = input("Select (F)" )
+source_temp = int(input("What is the temperature: " ))
+s, m = convert_temperature(scale, source_temp)
+print(source_temp, "degrees", scale, "is", m, "degrees", s)
